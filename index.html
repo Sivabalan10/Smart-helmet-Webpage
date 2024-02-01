@@ -21,16 +21,67 @@
 <body>
 	<header>
 		<nav>
-			<a href="">Home</a>
-			<a href="">Details</a>
-			<a href="">Features</a>
-			<a href="">Contact</a>
+			<a onclick="home()">Home</a>
+			<a onclick="details()">Details</a>
+			<a onclick="home()">Features</a>
+			<a href="https://www.justdial.com/Chengalpattu/Hospitals-in-SRM-University-Kattankolathur/nct-10253670">Contact</a>
 			<a id = "last"><i class='fas fa-user-circle' style='font-size:31px;color:black'></i></a>
 		</nav>
 	</header>
 	<main>
-		<br><br>
-		<div id="chartContainer" style="height: 370px; width: 100%;clear: both;display: block;"></div>
+		<br><br><br><br>
+		<div id = "home">
+			<br><br><br>
+			<h1 id = "wel">WELCOME TO SMART HELMET</h1>
+			<br><br>
+			<div id = "feat_1">
+				<article>
+					<h3>HEADS-UP DISPLAY</h3><br>
+					<p>Our smart helmet boasts an inbuilt headset display that transcends traditional functionalities. Alongside displaying the time, it incorporates innovative features like turn indicators. This forward-thinking display, strategically positioned within the helmet's field of view, elevates the user experience by delivering crucial information directly. This enhancement not only contributes to improved navigation but also ensures heightened safety during rides. Our commitment to intuitive and secure riding technology is epitomized by this cutting-edge addition to the smart helmet experience.</p>
+				</article>
+				<section>
+					<img src="images/hologram.png">
+				</section>
+			</div>
+			<br><br><br>
+			<div id = "feat_2">
+				<section>
+					<img src="images/mq3.png">
+				</section>
+				<article>
+					<h3>ALCOHOL DETECTION</h3><br>
+					<p>A standout feature of our smart helmet is its integrated alcohol detection system, leveraging the MQ3 sensor for precise breath analysis. With strategically placed sensors, the helmet prioritizes rider well-being by promptly identifying alcohol levels and promoting responsible riding habits. This advanced technology reflects our commitment to a comprehensive and secure riding experience.</p>
+				</article>
+			</div>
+			<br><br><br><br><br>
+			<div id = "feat_3">
+				<article>
+					<h3>FOOTAGE RECORDER</h3><br>
+					<p>Equipped with advanced capabilities, our smart helmet is outfitted with an onboard ESP32 CAM for seamless ride footage capture, bolstering safety and streamlining documentation. A distinctive feature allows riders to effortlessly access real-time footage through this website, providing immediate insights into their journeys and elevating monitoring and transparency.</p>
+				</article>
+				<section>
+					<img src="images/esp32.png">
+				</section>
+			</div>
+			<br><br><br><br><br>
+			<div id = "feat_4">
+				<section>
+					<img src="images/gsm.png">
+				</section>
+				<article>
+					<h3>EMERGENCY SENSOR</h3><br>
+					<p>Another notable feature of our smart helmet involves a dedicated sensor designed to initiate emergency assistance. In the event of an accident, a pressure sensor is deployed; upon activation, it sends a distress signal to the integrated GSM module. This module then promptly transmits the rider's location to nearby hospitals, streamlining the process of calling for an ambulance. This innovative technology is a crucial addition to our smart helmet, prioritizing rider safety by expediting emergency response efforts.</p>
+				</article>
+			</div>
+			<br><br><br><br><br>
+		</div>
+
+		<br><br><br>
+
+		<div id = "details">
+		<div class="chart_cont">
+		<div id="chartContainer" style="height: 370px; width:50%;clear: both;display:block;justify-content:center;border-radius:20px;"></div>
+		</div>
 
 		<br><br><br>
 		<h1>Collisions</h1>
@@ -46,15 +97,24 @@
 					<td>Collision_1</td>
 					<td>10/12/2023</td>
 					<td>11:22:34</td>
-					<td><embed></embed></td>
+					<td><embed>Not Found</embed></td>
 				</tr>
 
 			</table>
 		</div>
-			<br><br>
-		   <h1>Live Footage</h1>
-		   <button>View live Footage</button>
-		   <img style="display:block;-webkit-user-select: none; margin: auto;background-color: hsl(0, 0%, 25%);border-radius:50%;border:red 3px solid;" src="http://192.168.140.5/" width="350" height="350">
+		
+
+			<br><br><br>
+		   <h1>Live Footage</h1><br>
+		   <button id="view_live" onclick="live_footage()">View live Footage</button>
+		   <img id = "esp" style="display:none;-webkit-user-select: none; margin: auto;background-color: hsl(0, 0%, 25%);border-radius:50%;border:red 3px solid;" src="http://192.168.140.5/" width="350" height="350" onclick="openFullscreen()">
+		</div>
+		<br><br><br><br>
+
+		<div class="live_location">
+		<h3>Live location</h3>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15548.166965414965!2d80.18111409999997!3d13.033013900000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5260d5ecbd2f21%3A0x64dd2ba1af48b320!2sSRM%20Hospitals%2C%20Ramapuram!5e0!3m2!1sen!2sin!4v1706809110909!5m2!1sen!2sin" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
 	</main>
 	<footer>
 
