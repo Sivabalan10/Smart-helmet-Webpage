@@ -54,13 +54,17 @@ window.onload = function(){
 	var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,
 	title: {
-		text: "Alcohol Detection"
+		text: "Alcohol Detection",
+		fontColor:"#ffcc00"
 	},
+	backgroundColor:"#333333",
+	
 	data: [{
 		type: "pie",
 		startAngle: 240,
 		yValueFormatString: "##0.00\"%\"",
 		indexLabel: "{label} {y}",
+		indexLabelFontColor: "white",
 		dataPoints: [
 			{y: count_1, label: "No alcohol"},
 			{y: count_2, label: "Subtle Impression"},
@@ -73,4 +77,41 @@ window.onload = function(){
 	});
 	chart.render();
 
+	
+	
+
+}
+// get elements
+
+// Live footage
+function live_footage(){
+		let but_1 = document.getElementById("view_live");
+		let rec = document.getElementById("esp");
+		rec.style.display = "block";
+		but_1.style.display = "none";
+}
+
+/* Execute the openFullscreen() function to open the video in fullscreen. Include prefixes for browsers that do not support the requestFullscreen property */
+function openFullscreen() {
+  let rec = document.getElementById("esp");
+  if (rec.requestFullscreen) {
+    rec.requestFullscreen();
+  } else if (rec.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (rec.msRequestFullscreen) { /* IE11 */
+    rec.msRequestFullscreen();
+  }
+}
+
+function home(){
+	let home = document.getElementById("home");
+	let details = document.getElementById("details");
+	home.style.display = "grid";
+	details.style.display = "none";
+}
+function details(){
+	let home = document.getElementById("home");
+	let details = document.getElementById("details");
+	home.style.display = "none";
+	details.style.display = "block";
 }
