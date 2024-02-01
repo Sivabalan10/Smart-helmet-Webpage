@@ -1,35 +1,109 @@
 *{
 	box-sizing: border-box;
 	margin: 0;
+	font-family: 'Nunito', sans-serif;
+	text-align: center;
+
 }
 body{
+	background: #d9d9d9;
 	font-family: 'Nunito', sans-serif;
+}
+#wel{
+	font-size: 4em;
+	color: #ffcc00;
+	text-shadow: 1px 1px 1px black;
+}
+#home{
+	clear: both;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	background: #333333;
+	color: white;
+	border-radius: 15px;
+	box-shadow: 5px 5px 5px 4px darkgrey;
+	animation-name: ease;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+
+}
+article h3{
+	border:2px solid #ffcc00;
+	font-size: 1.3em;
+	padding: 10px;
+	transform: skew(-5deg);
+}
+#feat_1,#feat_2,#feat_3,#feat_4{
+	display: flex;
+	flex-direction:row;
+	float: left;
+	justify-content:space-evenly;
+}
+article p{
+	font-size: 1.1em;
+}
+article{
+	display: block;
+	width: 60%;
+	padding: 20px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+section{
+	width: 40%;
+}
+section img{
+	width: 70%;
+	float: center;
+	border-radius: 30%;
 }
 header{
 	padding:10px;
 }
 main h1{
+	clear: both;
 	text-align: center;
 	color: #333333;
 	font-family: 'Oswald', sans-serif;
 }
-nav{
-	position: sticky;
-	box-sizing: border-box;
-	width: 100%;
-	text-decoration: none;
-	color: black;
-	top:0;
+nav {
+  position: fixed;
+  box-sizing: border-box;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  top: 0;
+  left: 0; 
+  background: white;
+  padding: 6px; 
+  z-index: 1000; 
 }
 a{
-	padding: 10px;
+	color: black;
+	padding: 15px;
 	font-size: 1em;
 	float: left;
 	text-decoration: none;
-	color: black;
+	cursor: pointer;
 }
 i{
 	margin-top: 0%;
+}
+.chart_cont{
+	background: #333333;
+	clear: both;
+	display:flex;
+	justify-content:center;
+	margin-right: 20%;
+	margin-left: 20%;
+	padding: 15px;
+	border-radius: 15px;
+	box-shadow: 5px 5px 5px 4px darkgrey;
+	
 }
 #last{
 	float: right;
@@ -46,10 +120,49 @@ td{
 	border: 1px solid darkgrey;
 	padding:12px;
 	margin:auto;
-
 }
 table{
 	border: 2.5px solid black;
 	box-sizing: border-box;
-
+	background: white;
 }
+#view_live{
+	margin: 0 auto;
+	display: block;
+	width: 15%;
+	padding: 20px;
+	background: red;
+	color: white;
+	font-size: 1.2em;
+	border-radius: 8px;
+}
+#details{
+	display: none;
+	animation-name:ease;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+}
+.live_location{
+	color:blue;
+	background: white;
+	position: fixed;
+	bottom: 5px;
+	right:5px;
+	border-radius: 20px;
+	border:darkblue solid 3px;
+}
+@keyframes ease {
+  0% {
+    filter: blur(5px);
+  }
+  85%{
+  	filter: blur(4px);
+  }
+  99%{
+  	filter: blur(3px);
+  }
+  100% {
+ 	filter:blur(1px);
+  }
+}
+
