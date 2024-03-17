@@ -89,10 +89,18 @@
             max-height: 100%;
             border-radius: 10px;
         }
+        #logo{
+        	width:5%;
+        	display: block;
+        	border-radius: 50%;
+        	margin:0 auto;
+        }
+
     </style>
 </head>
 <body>
-	<h1 id = "title">BOOK AMBULANCE ONLINE</h1><br>
+	<h1 id = "title"><br><br><img id = "logo" src="images/tn-logo.png">TAMILNADU GOVERNMENT AMBULANCE BOOKING SERVICE</h1><br>
+	
 	
     <div id="container">
         <div class="form-container">
@@ -120,7 +128,7 @@
         </div>
 
         <div class="image-container">
-            <img src="images/108.jpg" alt="Ambulance Image">
+            <img src="images/ambulancce.png" alt="Ambulance Image">
         </div>
     </div>
 	
@@ -160,7 +168,7 @@
 			const page_1 = document.getElementById('container');
 			const page_2 = document.getElementById('page_2');
 			swal({title:"Successfully Booked!",
-			 text:"You can track the ambulance now",
+			 text:"Thanks for helping to save a life ~ M.K.Stalin",
 			 type:"success"});
 			page_1.style.display = "none";
 			page_2.style.display = "inline-block";
