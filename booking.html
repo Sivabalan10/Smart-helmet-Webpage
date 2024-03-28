@@ -97,11 +97,10 @@
         	padding-top: 20px;
         	margin:0 auto;
         }
-
     </style>
 </head>
 <body>
-	<h1 id = "title"><br><br><img id = "logo" src="images/tn-logo.png">TAMILNADU GOVERNMENT AMBULANCE SERVICE</h1><br>
+	<br><br><br><h1 id = "title"><br><br><img id = "logo" src="images/tn-logo.png">TAMILNADU GOVERNMENT AMBULANCE SERVICE</h1><br>
 	
 	
     <div id="container">
@@ -125,7 +124,7 @@
                     <option value="jh health care">JH Health Care Hospital, Poonamallee, CHENNAI</option>
                     <option value="Kumaran">Kumaran Hospital, Poonamallee, CHENNAI</option>
                 </select><br><br>
-                <button type="button" onclick="booking_ambulance()" id="book" disabled>Book</button>
+                <button type="button" onclick="booking_ambulance()" id="book" disabled>BOOK AN AMBULANCE</button>
             </form>
         </div>
 
@@ -171,6 +170,8 @@
 			const page_2 = document.getElementById('page_2');
 			swal({title:"Successfully Booked!",
 			 text:"Thanks for helping to save a life ~ M.K.Stalin",
+			 imageUrl:'https://pnghq.com/wp-content/uploads/pnghq.com-cii.png',
+			 imageWidth: 120,
 			 type:"success"});
 			page_1.style.display = "none";
 			page_2.style.display = "inline-block";
