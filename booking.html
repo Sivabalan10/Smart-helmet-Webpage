@@ -14,17 +14,17 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
             margin: 0;
             font-family: "Alef", sans-serif;
-			 font-weight: 400;
-			 font-style: normal;
+			font-weight: 400;
+			font-style: normal;
+			width: 100%;
         }
         h1{
         
         	text-align: center;
         	background: #ff4d4d;
-        	padding: 30px;
+        	padding: 7px;
         	font-size: 25px;
         	width: 100%;
         	color: white;
@@ -93,14 +93,18 @@
         #logo{
         	width:5%;
         	display: block;
-        	border-radius: 50%;
-        	padding-top: 20px;
         	margin:0 auto;
+        	margin-top: 0;
         }
     </style>
 </head>
 <body>
-	<br><br><br><h1 id = "title"><br><br><img id = "logo" src="images/tn-logo.png">TAMILNADU GOVERNMENT AMBULANCE SERVICE</h1><br>
+
+	<h1 id="title">
+	<img src="https://pnghq.com/wp-content/uploads/pnghq.com-cii.png" style="float: right; vertical-align: middle;width:120px;right:5px;">
+    <img id="logo" src="images/tn-logo.png" >
+    TAMILNADU GOVERNMENT AMBULANCE SERVICE 
+</h1><br>
 	
 	
     <div id="container">
@@ -124,11 +128,9 @@
                     <option value="jh health care">JH Health Care Hospital, Poonamallee, CHENNAI</option>
                     <option value="Kumaran">Kumaran Hospital, Poonamallee, CHENNAI</option>
                 </select><br><br>
-<<<<<<< HEAD
+
                 <button type="button" onclick="booking_ambulance()" id="book" disabled>BOOK AN AMBULANCE</button>
-=======
-                <button type="button" onclick="booking_ambulance()" id="book" disabled>Book an ambulance</button>
->>>>>>> 9046890d5d1fa15fa80525f9ef14e70273cc2b36
+
             </form>
         </div>
 
