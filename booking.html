@@ -115,7 +115,8 @@
                 <input type="text" id="name" name="name" placeholder="Name">
                 <label for="phno">Phone no: </label>
                 <input type="text" id="phno" name="name" placeholder="Phone number">
-                <label for="address">Address: </label>
+                <label >Address: <button style = "font-size: 15px;background:grey;width:50%;padding: 3px 2px;" onclick = "live_location(event)" id = "live_but">Add live location</button></label>
+                <p style="color:blue;display: none;" id="live_add"></p>
                 <textarea id="address" name="address" rows="4" placeholder="Incident address"></textarea>
                 <label for = "myFile">Upload Image: </label>
                 <input type="file" id="myFile" name="filename">
@@ -141,6 +142,8 @@
 	
 	<div id = "page_2" style="display:none;background: #f2f2f2;padding: 30px; border-radius:10px ;">
 		<h2>The Ambulance is on the way......</h2>
+        <p style="color:red">It will take 30mins to arrive due to heavy traffic....</p>
+        <button style="background:red;border:none;padding: 10px;color: white;border-radius: 7px;" onclick="cancel_booking()">Cancel booking</button>
 		<button style="background:blue;padding:10px;color:white;border-radius: 7px;border: none;">View live location</button>
 		<p style="color:grey">Driver: Palani<br>Phone no: +91 7834536454<br>Arriving in 7mins....</p>
 		<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d62186.567006629135!2d80.15913168364689!3d13.057272889931722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x3a52667705ba1a01%3A0xb59781072e7d30a0!2sApollo%20First%20Med%20Hospitals%2C%20Poonamallee%20High%20Road%2C%20New%20Bupathy%20Nagar%2C%20Kilpauk%2C%20Chennai%2C%20Tamil%20Nadu!3m2!1d13.077712499999999!2d80.24592!4m5!1s0x3a52611b90488f51%3A0x9665a1353b333074!2sPorur%2C%20Chennai%2C%20Tamil%20Nadu!3m2!1d13.038189599999999!2d80.1565461!5e0!3m2!1sen!2sin!4v1710668067927!5m2!1sen!2sin" width="650" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -167,7 +170,7 @@
 		let name = document.getElementById('name');
 		let phno = document.getElementById('phno');
 		let address = document.getElementById('address');
-		if ((name.value != "") && (phno.value != "") && (address.value != "")){
+		if ((name.value != "") && (phno.value != "")){
 			let tit = document.getElementById('title');
 			console.log(name.value);
 			console.log(phno.value);
@@ -200,6 +203,26 @@
 		}
 	}
 	getLocation();
+    function live_location(event){
+        event.preventDefault(); 
+        let address = document.getElementById('address');
+        let live_add = document.getElementById('live_add');
+        document.getElementById("live_but").style.display = "none";
+        address.style.display = "none";
+        live_add.style.display = "block";
+        live_add.innerHTML = "(Live location added)<br>2/1027 Near bus stop,<br> Porur,<br> Chennai";     
+    }
+    function cancel_booking(){
+        swal({title:"Booking Cancelled!",
+             text:"Your current booking is cancelled",
+             type:"error"});
+        const page_1 = document.getElementById('container');
+        const page_2 = document.getElementById('page_2');
+        let tit = document.getElementById('title');
+        page_2.style.display = "none";
+        page_1.style.display = "flex";
+        tit.style.display = "block";
+    }
 </script>
 </body>
 </html>
